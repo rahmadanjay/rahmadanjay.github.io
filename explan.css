@@ -1,0 +1,127 @@
+/* Gaya umum untuk halaman penjelasan materi */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  background-color: aliceblue;
+}
+.section .content {
+  padding: 1.4rem 7%;
+  max-width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  background-color: #1c4e80;
+
+  color: white;
+  text-align: center;
+  width: 100%;
+
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.button-container {
+  margin-top: 20px;
+}
+
+.prev-button,
+.next-button {
+  background-color: #4caf50; /* Warna latar tombol */
+  color: white; /* Warna teks */
+  border: none; /* Menghilangkan border default */
+  padding: 12px 20px; /* Padding tombol */
+  text-align: center; /* Memusatkan teks */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  display: inline-block; /* Membuat tombol bersebelahan */
+  font-size: 16px; /* Ukuran font */
+  margin: 5px; /* Margin antar tombol */
+  cursor: pointer; /* Menampilkan kursor pointer */
+  border-radius: 5px; /* Sudut membulat */
+  transition: background-color 0.3s; /* Transisi untuk efek hover */
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #45a049; /* Warna latar saat hover */
+}
+.prev-button:focus,
+.next-button:focus {
+  outline: none; /* Menghilangkan outline saat fokus */
+  box-shadow: 0 0 5px rgba(72, 193, 228, 0.5); /* Efek fokus */
+}
+
+button {
+  background-color: #1c4e80;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: 0px 6px 12px rgba(28, 78, 128, 0.4);
+}
+
+button:hover {
+  background-color: #145687;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #999;
+  text-align: center;
+}
+
+footer a {
+  color: #1c4e80;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* mobile phone */
+@media (max-width: 600px) {
+  .section {
+    min-height: auto;
+    padding: 1rem 5%;
+    flex-direction: column;
+  }
+  .section .content img {
+    max-width: 400px;
+    max-height: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  .header,
+  .button {
+    padding: 12px 0;
+    font-size: 1rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}

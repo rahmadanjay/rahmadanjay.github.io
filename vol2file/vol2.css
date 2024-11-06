@@ -1,0 +1,153 @@
+/* Warna tema: warna lembut dengan desain minimalis */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.header p {
+  font-size: 12px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: justify;
+  color: #f0f4f8;
+}
+
+.container {
+  max-width: 800px;
+  margin: 25px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  margin-bottom: 25px;
+  font-size: 12px;
+  color: #333;
+}
+.explanation {
+  background-color: #e7f3fe; /* Warna latar belakang lembut untuk penjelasan */
+  border-left: 5px solid #4a90e2; /* Garis samping berwarna biru */
+  padding: 15px; /* Ruang di dalam elemen */
+  margin-top: 10px; /* Jarak atas dari soal */
+  margin-bottom: 25px; /* Jarak bawah dari penjelasan */
+  border-radius: 8px; /* Sudut yang membulat */
+  font-size: 12px; /* Ukuran font untuk penjelasan */
+  color: #333; /* Warna teks */
+  font-style: italic; /* Teks miring untuk memberikan penekanan */
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(74, 144, 226, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ab8;
+}
+#TIU {
+  background-color: #ddb813;
+}
+#MM {
+  background-color: #59b919;
+}
+#TKP {
+  background-color: #dd6413;
+}
+#TIU:hover {
+  background-color: #9e8309;
+}
+#MM:hover {
+  background-color: #367c07;
+}
+#TKP:hover {
+  background-color: #8a3d0b;
+}
+label {
+  margin: 20px 0;
+  font-size: 12px;
+  color: #555;
+}
+
+input[type='radio'] {
+  margin-right: 10px;
+}
+
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #27ae60;
+  text-align: center;
+}
+
+#countdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #428819;
+  color: #f0f4f8;
+  border-radius: 8px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+/* Gaya untuk tabel pojok soal */
+/* Gaya untuk grid kotak-kotak soal */
+
+/* NEXT BUTTON */
+/* Laptop */
+@media (min-width: 800px) {
+  html {
+    font-size: 75%;
+  }
+  .container {
+    margin-left: 250px;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  label {
+    margin: 20px 0;
+    font-size: 12px;
+    color: #555;
+  }
+}
+/* mobile phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  label {
+    margin: 20px 0;
+    font-size: 10px;
+    color: #555;
+  }
+}

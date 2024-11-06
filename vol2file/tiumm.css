@@ -1,0 +1,169 @@
+/* Warna tema: warna lembut dengan desain minimalis */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.header .h1 {
+  font-size: 12px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: justify;
+  color: #f0f4f8;
+}
+
+.quiz-container {
+  display: block;
+  max-width: 800px;
+  margin: auto;
+  background: rgb(245, 235, 235);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-gambar {
+  margin-bottom: 25px;
+  font-size: 12px;
+  color: #333;
+}
+
+.quiz-container .form-gambar img {
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+  width: 50%;
+  height: auto;
+}
+.explanation {
+  background-color: #e7f3fe; /* Warna latar belakang lembut untuk penjelasan */
+  border-left: 5px solid #4a90e2; /* Garis samping berwarna biru */
+  padding: 15px; /* Ruang di dalam elemen */
+  margin-top: 10px; /* Jarak atas dari soal */
+  margin-bottom: 25px; /* Jarak bawah dari penjelasan */
+  border-radius: 8px; /* Sudut yang membulat */
+  font-size: 20 px; /* Ukuran font untuk penjelasan */
+  color: #333; /* Warna teks */
+  font-style: italic; /* Teks miring untuk memberikan penekanan */
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(74, 144, 226, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ab8;
+}
+#TIU {
+  background-color: #ddb813;
+}
+#MM {
+  background-color: #59b919;
+}
+#TKP {
+  background-color: #dd6413;
+}
+#TIU:hover {
+  background-color: #9e8309;
+}
+#MM:hover {
+  background-color: #367c07;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #555;
+}
+
+input[type='radio'] {
+  margin-right: 10px;
+}
+#countdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #428819;
+  color: #f0f4f8;
+  border-radius: 8px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Gaya untuk tabel pojok soal */
+/* Gaya untuk grid kotak-kotak soal */
+.soal-grid {
+  position: relative;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  top: 20px;
+  right: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 40px); /* 5 kotak per baris */
+  grid-gap: 10px;
+}
+
+.soal-box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c4e80; /* Warna biru untuk soal yang belum dijawab */
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.soal-box a {
+  color: white;
+  text-decoration: none;
+}
+.soal-box.answered {
+  background-color: #28a745; /* Warna hijau untuk soal yang sudah dijawab */
+}
+
+/* Hover effect */
+.soal-box:hover {
+  background-color: #145687; /* Biru lebih terang saat di-hover */
+}
+/* Responsive design untuk mobile */
+@media (max-width: 600px) {
+  #quiz-container {
+    padding: 15px;
+  }
+  #answers-container img {
+    width: 70px;
+  }
+  button {
+    width: 100%;
+  }
+}

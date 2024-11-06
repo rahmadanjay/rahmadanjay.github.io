@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="hasil.css" />
+    <title>Hasil Ujian - Simpel dan Elegan</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Hasil Ujian CBT</h1>
+
+    </div>
+<div class="container">
+  <div id="result" class="result"></div>
+</div>
+
+      <button onclick="resetExam()">KELUAR</button>
+    </div>
+    <!-- Tombol untuk menuju ke penjelasan materi soal -->
+<button id="explanation-btn">Lihat Penjelasan Materi</button>
+</div>
+
+<footer>
+    <p>&copy; 2024 Ujian CBT - </p>
+</footer>
+
+<script>
+   
+ // Ambil total skor dari localStorage dan tampilkan
+ function calculateTotal () {
+ var score1 = parseInt(localStorage.getItem('totalscore1')) || 0;
+ var score2 = parseInt(localStorage.getItem('totalscore2')) || 0;
+ var score3 = parseInt(localStorage.getItem('totalscore3')) || 0;
+ var score4 = parseInt(localStorage.getItem('totalscore4')) || 0;
+
+
+ 
+
+var semua = score1 + score2 + score3 + score4;
+ var resultDiv = document.getElementById('result');
+ resultDiv.innerHTML = `Total Score Anda: ${semua}`;}
+
+ window.onload = calculateTotal();
+
+ function resetExam() {
+  // Hapus skor total dari localStorage
+  localStorage.removeItem('totalscore1');
+  localStorage.removeItem('totalscore2');
+  localStorage.removeItem('totalscore3');
+  localStorage.removeItem('totalscore4');
+
+  // Hapus semua jawaban yang tersimpan di localStorage
+  for (var index = 0; index < questions.length; index++) {
+    localStorage.removeItem('question' + index);
+
+    // Menghapus pilihan jawaban yang dipilih di halaman
+    var selectedAnswer = document.querySelector(
+      'input[name="question' + index + '"]:checked'
+    );
+    if (selectedAnswer) {
+      selectedAnswer.checked = false;
+    }
+  }
+  for (var index = 0; index < questions.length; index++) {
+    localStorage.removeItem('question2' + index);
+
+    // Menghapus pilihan jawaban yang dipilih di halaman
+    var selectedAnswer = document.querySelector(
+      'input[name="question2' + index + '"]:checked'
+    );
+    if (selectedAnswer) {
+      selectedAnswer.checked = false;
+    }
+  }
+  for (var index = 0; index < questions.length; index++) {
+    localStorage.removeItem('question3' + index);
+
+    // Menghapus pilihan jawaban yang dipilih di halaman
+    var selectedAnswer = document.querySelector(
+      'input[name="question3' + index + '"]:checked'
+    );
+    if (selectedAnswer) {
+      selectedAnswer.checked = false;
+    }
+  }
+  for (var index = 0; index < questions.length; index++) {
+    localStorage.removeItem('question4' + index);
+
+    // Menghapus pilihan jawaban yang dipilih di halaman
+    var selectedAnswer = document.querySelector(
+      'input[name="question4' + index + '"]:checked'
+    );
+    if (selectedAnswer) {
+      selectedAnswer.checked = false;
+    }
+  }
+  localStorage.removeItem('remainingTime');
+  
+  // Set totalScore kembali ke nol
+  var totalScore = 0;
+
+  // Opsional: Jika ingin mengarahkan pengguna ke halaman awal ujian
+  window.location.href = "/index.html"; // ganti dengan URL halaman awal ujian
+}
+
+// Fungsi untuk menyimpan jawaban dan pindah halaman hasil
+
+// Panggil finishQuiz ketika tombol selesai ditekan
+
+
+
+      // Tombol kembali ke ujian
+    
+        // Tombol menuju halaman penjelasan materi soal
+ document
+  .getElementById('explanation-btn')
+  .addEventListener('click', function () {
+    window.location.href = 'explanation.html'; // Ganti dengan halaman penjelasan materi soal
+  });
+        
+    </script>
+    <script src="vol2.js"></script>
+    <script src="2tiu.js"></script>
+    <script src="tiumm.js"></script>
+    <script src="tkp2.js"></script>
+    
+  </body>
+</html>

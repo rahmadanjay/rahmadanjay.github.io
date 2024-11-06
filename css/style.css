@@ -1,0 +1,502 @@
+:root {
+  --primary: #68ca30;
+  --bg: #e5e4cc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', bold;
+  background-color: var(--bg);
+  color: rgb(12, 34, 68);
+  max-height: max-content;
+}
+section {
+  display: none;
+}
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(186, 199, 167, 0.788);
+  border-bottom: 1px solid #fdfbfa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fcfcfa;
+  font-style: italic;
+}
+.navbar .navbar-logo span {
+  color: #698474;
+  font-size: 2rem;
+}
+.navbar p {
+  color: #0c2244;
+  font-size: 1.5rem;
+}
+
+.navbar .navbar-nav a {
+  color: #698474;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 1rem;
+}
+
+.navbar,
+.navbar-nav a:hover {
+  color: #fff;
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #0059ff;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #698474;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #fff;
+}
+#search {
+  display: none;
+}
+#top-up {
+  display: none;
+}
+
+#menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/pilat-io.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgb(238, 232, 154) 8%,
+    rgba(233, 229, 195, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: #0c2244;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #f1f1e8;
+}
+
+.hero .content p {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  color: #fff;
+
+  background-color: #c0a036;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #b8dfee;
+  background-color: rgba(12, 34, 68, 0.808);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* About Section Start */
+.about,
+.menuu,
+.contact {
+  padding: 6rem 5% 4rem; /* Penyesuaian padding untuk tata letak yang lebih seimbang */
+  margin-top: 2rem; /* Margin atas lebih besar untuk pemisahan yang lebih baik */
+  display: none; /* Menggunakan flexbox untuk tata letak responsif */
+  flex-direction: column; /* Menyusun konten dalam kolom pada perangkat kecil */
+  align-items: center; /* Menyelaraskan elemen di tengah */
+  justify-content: center; /* Menjaga konten tetap terpusat */
+}
+
+.about h2,
+.menuu h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.8rem; /* Ukuran font sedikit lebih besar untuk daya tarik visual */
+  margin-bottom: 2.5rem; /* Penurunan margin untuk menjaga keseimbangan */
+  margin-top: 1.5rem;
+}
+
+.about h2 span,
+.menuu h2 span,
+.contact h2 span {
+  color: #f8760b;
+}
+
+.about .row {
+  display: flex;
+  flex-wrap: wrap; /* Memungkinkan pembungkusan elemen */
+  gap: 2rem; /* Jarak antar elemen dalam baris */
+  justify-content: center; /* Menyusun elemen secara terpusat */
+  width: 100%;
+}
+
+.about .row .about-img {
+  flex: 1 1 30rem; /* Ukuran gambar responsif */
+  max-width: 70%;
+}
+
+.about .row .about-img img {
+  width: 100%; /* Menjamin gambar mengisi seluruh elemen */
+  border-radius: 10px; /* Menambah elemen elegan dengan sudut membulat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk estetika */
+}
+
+.about .row .content {
+  flex: 1 1 30rem; /* Menyesuaikan lebar konten */
+  padding: 1rem; /* Menambahkan padding untuk ruang di sekitar teks */
+  text-align: center;
+}
+
+.about .row .content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.about .row .content p {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300; /* Penurunan berat font untuk meningkatkan keterbacaan */
+  line-height: 1.7; /* Meningkatkan jarak antar baris */
+  animation: kedipWarna 2s infinite;
+}
+
+/* About Section End */
+
+/* menuu section */
+.menuu h2,
+.contact h2 {
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+}
+
+.menuu p,
+.content p,
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+  font-size: 1.7rem;
+}
+
+.menuu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menuu .row .menu-card {
+  text-align: center;
+  padding: 4rem;
+}
+
+.menuu .row .menu-card img {
+  width: 80%;
+}
+
+.menuu .row .menu-card .menu-card-title {
+  margin-top: 1.5rem;
+}
+
+.menuu .row .menu-card .vol1 {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #c0a036;
+  cursor: pointer;
+}
+.menuu .row .menu-card .vol1:hover {
+  font-size: 2rem;
+  color: #f7d40e;
+}
+.menuu .row .menu-card .vol2 {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #c0a036;
+  cursor: pointer;
+}
+.menuu .row .menu-card .vol2:hover {
+  font-size: 2rem;
+  color: #f7d40e;
+}
+/* BELUM RILIS */
+.menuu .row .menu-card .vol5 {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #160e0e;
+  background-color: #7e7d7b;
+}
+/* KONTAK SECTION */
+.contact {
+  display: none;
+}
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #698474;
+}
+
+.contact .row .map img {
+  flex: 1 1 45rem;
+  width: 100%;
+  display: block;
+  margin-left: 20px;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #e5e4cc;
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #0a051f;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: #c0a036;
+  cursor: pointer;
+}
+
+/* KONTAK SECTION */
+
+/* FOOTER */
+footer {
+  background-color: #c0a036;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .social {
+  padding: 1rem 0;
+}
+
+footer .social a {
+  color: #fdfbfa;
+  margin: 1rem;
+}
+
+footer .social a:hover {
+  color: #0a051f;
+}
+
+footer .links {
+  margin-bottom: 1.5rem;
+}
+
+footer .links a {
+  color: #fdfbfa;
+  padding: 0.7rem 1rem;
+}
+
+footer .links a:hover {
+  color: #0a051f;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: #f5f4f8;
+}
+
+/* FOOTER */
+@keyframes kedipWarna {
+  0% {
+    color: #2c3e50;
+  } /* Biru Gelap */
+  25% {
+    color: #8e44ad;
+  } /* Ungu */
+  50% {
+    color: #16a085;
+  } /* Hijau Teal */
+  75% {
+    color: #e67e22;
+  } /* Oranye */
+  100% {
+    color: #2c3e50;
+  } /* Biru Gelap */
+}
+
+.kedip-warna-teks {
+  animation: kedipWarna 2s infinite;
+}
+/* Media Queries */
+
+/* Laptop */
+/* Media Query for Larger Screens (Laptop) */
+@media (min-width: 1024px) {
+  .about .row .about-img {
+    flex: 1 1 40rem; /* Membuat gambar lebih besar di layar laptop */
+    max-width: 40%; /* Membatasi ukuran gambar agar pas di layar besar */
+  }
+
+  .about .row .content {
+    flex: 1 1 20rem; /* Membuat konten lebih lebar di layar besar */
+    padding: 2rem;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #2b547e;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #ffd900;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar,
+  .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+
+.about .row {
+  flex-wrap: wrap;
+}
+
+.contact .row {
+  flex-wrap: wrap;
+}
+.contact .row .map img {
+  height: 35rem;
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.contact .row form {
+  padding-top: 0;
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
